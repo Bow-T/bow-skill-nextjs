@@ -2,8 +2,8 @@
   "$schema": "https://raw.githubusercontent.com/Bow-T/bow-agent/main/schema/bow-skill.schema.json",
   "id": "nextjs-supabase",
   "label": "Next.js + Supabase",
-  "version": "1.0.0",
-  "description": "Bộ skill cho stack Next.js (App Router) + Supabase của team Bow — lớp data qua server, quy ước component/route, và realtime phía client. Đồng bộ Supabase với stack Flutter và React Native.",
+  "version": "1.1.0",
+  "description": "Bộ skill cho stack Next.js (App Router) + Supabase của team Bow — lớp data qua server, quy ước component/route, realtime phía client, validate form, và vòng đời status của entity trên nhiều surface. Đồng bộ Supabase với stack Flutter và React Native.",
   "maintainer": "team-web",
   "skillsDir": "skills",
   "targets": {
@@ -16,6 +16,8 @@
   "skills": [
     "nextjs-data",
     "nextjs-convention",
-    "nextjs-realtime"
+    "nextjs-realtime",
+    "nextjs-form",
+    "store-status-lifecycle"
   ]
 }
