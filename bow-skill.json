@@ -1,23 +1,26 @@
 {
   "$schema": "https://raw.githubusercontent.com/Bow-T/bow-agent/main/schema/bow-skill.schema.json",
-  "id": "nextjs-supabase",
-  "label": "Next.js + Supabase",
-  "version": "1.1.0",
-  "description": "Bộ skill cho stack Next.js (App Router) + Supabase của team Bow — lớp data qua server, quy ước component/route, realtime phía client, validate form, và vòng đời status của entity trên nhiều surface. Đồng bộ Supabase với stack Flutter và React Native.",
-  "maintainer": "team-web",
+  "id": "nextjs",
+  "label": "Next.js",
+  "version": "2.0.0",
+  "description": "Bộ skill cho công nghệ Next.js (App Router) + React: quy ước code và form của team Bow, cùng 2 skill hiệu năng / composition của Vercel (xem THIRD_PARTY.md). Lớp data & realtime Supabase (nextjs-data, nextjs-realtime) chỉ trải khi dự án tick cả bộ Supabase.",
+  "maintainer": "bow-agent",
   "skillsDir": "skills",
   "targets": {
     "detect": [
-      { "file": "package.json", "contains": "next" },
-      { "path": "app" }
-    ],
-    "monorepoHint": "apps/admin"
+      { "file": "package.json", "contains": "\"next\"" }
+    ]
+  },
+  "needs": {
+    "nextjs-data": ["supabase"],
+    "nextjs-realtime": ["supabase"]
   },
   "skills": [
-    "nextjs-data",
     "nextjs-convention",
-    "nextjs-realtime",
+    "nextjs-data",
     "nextjs-form",
-    "store-status-lifecycle"
+    "nextjs-realtime",
+    "vercel-composition-patterns",
+    "vercel-react-best-practices"
   ]
 }
